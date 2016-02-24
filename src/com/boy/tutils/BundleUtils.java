@@ -3,7 +3,6 @@ package com.boy.tutils;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import android.R.array;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.TextUtils;
