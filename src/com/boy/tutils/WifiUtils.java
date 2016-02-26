@@ -10,9 +10,8 @@ import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Enumeration;
 import java.util.List;
-
 import org.apache.http.conn.util.InetAddressUtils;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.DhcpInfo;
@@ -353,7 +352,8 @@ public class WifiUtils {
         return intToIp(mDhcpInfo.gateway);
     }
 
-    public String getBroadcastAddress() {
+    @SuppressLint("NewApi")
+	public String getBroadcastAddress() {
         System.setProperty("java.net.preferIPv4Stack", "true");
         try {
             for (Enumeration<NetworkInterface> niEnum = NetworkInterface.getNetworkInterfaces(); niEnum

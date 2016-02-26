@@ -5,7 +5,8 @@ import android.os.Looper;
 import android.widget.Toast;
 
 public class ToastUtils {
-
+	
+	private static Toast mToast;
 	public static void showShortToast(Context context, int resId) {
         show(context, context.getResources().getText(resId), Toast.LENGTH_SHORT);
     }
@@ -23,12 +24,19 @@ public class ToastUtils {
     }
 
     public static void show(Context context, CharSequence text, int duration) {
-    	if (!Thread.currentThread().getName().equals("main")) {
-			Looper.prepare();
-			Toast.makeText(context, text, duration).show();
-			Looper.loop();
-		} else {
-			Toast.makeText(context, text, duration).show();
+    	if (mToast == null) {
+    		mToast = Toast.makeText(context, text, duration);
+		}else {
+			mToast.setText(text);
+			mToast.setDuration(duration);
+		}
+    	mToast.show();
+    }
+    
+    public static void cancel(){
+    	if (mToast != null) {
+			mToast.cancel();
+			mToast = null;
 		}
     }
 
