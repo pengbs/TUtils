@@ -13,8 +13,8 @@
 **PreferencesUtils**：SharedPreference快捷存取数据；<br>
 **SecurityUtil**：MD5加密解密、3DES加密解密；<br>
 **TimeUtils**：时间和date相关；<br>
-**ToastUtils**：toast相关，在子线程一样使用；<br>
-**WifiUtils**：wifi相关，创建wifi热点、连接wifi、关闭wifi等；
+**ToastUtils**：toast相关，可以防止toast重复显示；<br>
+**WifiUtils**：wifi相关，创建wifi热点、连接wifi、关闭wifi等；<br>
 
 以后我还会持续收集和整理，欢迎pull request，一起维护增强！
 
