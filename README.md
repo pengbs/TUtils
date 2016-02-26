@@ -1,5 +1,8 @@
 # TUtils
 自己整理的android中一些常用的工具类，android develop utils<br>
+ jar包在assets目录下，有需要的可以直接下载使用；<br>
+   
+   
 **ActivityUtils**：activity快捷跳转，bundle可选；<br>
 **AppManager**：应用程序所有activity管理类，可以获取到当前activity，指定activity，在基类BaseActivity的onCreate()中加入```AppManager.getAppManager().addActivity(this);```即可将activity加入，在程序结束时调用```AppManager.getAppManager().AppExit();```即可关闭所有activity，完全退出程序；<br>
 **BundleUtils**：快捷获取activity之间传递的数据；<br>
