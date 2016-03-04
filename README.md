@@ -18,6 +18,7 @@
 **TimeUtils**：时间和date相关；<br>
 **ToastUtils**：toast相关，可以防止toast重复显示；<br>
 **WifiUtils**：wifi相关，创建wifi热点、连接wifi、关闭wifi等；<br>
+**ParcelableUtils**：序列化存取工具类；
 
 以后我还会持续收集和整理，欢迎pull request，一起维护增强！
 
