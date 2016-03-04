@@ -144,6 +144,18 @@ public class ImageUtils {
 		// w,h是原图的属性.
 		return Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, true);
 	}
+	
+	 /**
+     * scale image
+     */
+    public static Bitmap scaleImage(Bitmap org, float scaleWidth, float scaleHeight) {
+        if (org == null) {
+            return null;
+        }
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        return Bitmap.createBitmap(org, 0, 0, org.getWidth(), org.getHeight(), matrix, true);
+    }
 
     
     /**
